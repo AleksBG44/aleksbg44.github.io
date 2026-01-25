@@ -11,6 +11,15 @@ header {
     min-height: 10ch;
     padding: 10px;
 }
+
+#welcome {
+    color: rgb(224, 223, 244);
+    text-align: center;
+    padding-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
 section {
     padding-left: 50px;
 }
