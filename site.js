@@ -10,3 +10,4 @@ if (isMorning) {timeText.textContent = "Good morning! Ready to start the day?"}
 if (isAfternoon) {timeText.textContent = "Hey there! Hope your day's going well."}
 if (isEvening) {timeText.textContent = "Good evening! Hope you had a great day."}
 
+localStorage.setItem("It's a secret to everybody.", "To view the secret joke, please delete System32.")
