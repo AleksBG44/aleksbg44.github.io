@@ -50,3 +50,4 @@ setInterval(() => {
     currentImage += 1
     showImages()
 }, 5000);
+
