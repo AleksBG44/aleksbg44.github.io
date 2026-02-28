@@ -1,3 +1,5 @@
+(async () => {
+
 const timeText = document.querySelector('#welcome')
 
 const hours = new Date().getHours() // get the current hour
@@ -51,3 +53,30 @@ setInterval(() => {
     showImages()
 }, 5000);
 
+const pokeImg = document.querySelector('#pokeImg')
+
+const getRandomPokemon = async () => {
+   const url = 'https://pokeapi.co/api/v2/pokemon/' + Math.floor(Math.random() * 150)
+    const response = await fetch(url)
+    const json = await response.json()
+   const {name, sprites: {front_default}} = json
+   return {
+        name,
+        sprites: {front_default}
+   }
+}
+
+
+
+
+const renderPokemon = async () => {
+    const img = document.createElement('img')
+    const { name, sprites: {front_default} } = await getRandomPokemon()
+    img.src = front_default
+    img.alt = name
+    pokeImg.append(img)
+}
+
+renderPokemon()
+
+})()
